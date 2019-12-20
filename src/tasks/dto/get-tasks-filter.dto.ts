@@ -3,7 +3,7 @@ import { IsOptional, IsNotEmpty, IsEnum } from 'class-validator';
 
 export class GetTaskFilterDto {
   @IsOptional()
-  @IsEnum([TaskStatus.IN_PROGRESS, TaskStatus.DONE, TaskStatus.OPEN])
+  @IsEnum([TaskStatus.IN_PROGRESS, TaskStatus.DONE, TaskStatus.OPEN]) // @IsEnum(entity: object)
   status: TaskStatus;
 
   @IsOptional()
